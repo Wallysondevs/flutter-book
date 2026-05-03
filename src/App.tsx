@@ -1,10 +1,16 @@
-import { Suspense, lazy } from "react";
-  import { Switch, Route, Router } from "wouter";
+import { Suspense, lazy, useState, useEffect } from "react";
+  import { Switch, Route, Router, useLocation } from "wouter";
   import { useHashLocation } from "@/hooks/useHashLocation";
   import { Header } from "@/components/layout/Header";
   import { Sidebar } from "@/components/layout/Sidebar";
   import Home from "@/pages/Home";
   import NotFound from "@/pages/NotFound";
+
+  function ScrollToTop() {
+    const [location] = useLocation();
+    useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: "auto" }); }, [location]);
+    return null;
+  }
 
   const InstalarSdk = lazy(() => import("@/pages/InstalarSdk"));
 const HelloWorld = lazy(() => import("@/pages/HelloWorld"));
@@ -96,14 +102,15 @@ const Referencias = lazy(() => import("@/pages/Referencias"));
   }
 
   export default function App() {
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
       <Router hook={useHashLocation}>
-        <div className="min-h-screen bg-background text-foreground">
-          <Header />
-          <div className="flex">
-            <Sidebar />
-            <main className="flex-1 min-w-0">
-              <Suspense fallback={<Loading />}>
+        <ScrollToTop />
+        <div className="min-h-screen bg-background text-foreground lg:pl-72">
+          <Sidebar isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+          <Header onMenuClick={() => setMenuOpen(true)} />
+          <main className="min-w-0">
+            <Suspense fallback={<Loading />}>
                 <Switch>
                   <Route path="/" component={Home} />
           <Route path="/instalar-sdk" component={InstalarSdk} />
@@ -190,7 +197,6 @@ const Referencias = lazy(() => import("@/pages/Referencias"));
                 </Switch>
               </Suspense>
             </main>
-          </div>
         </div>
       </Router>
     );
