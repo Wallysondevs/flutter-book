@@ -1,38 +1,61 @@
-# 💙 Flutter — Guia Completo em Português
+# 💙 Flutter Book
 
-  Guia completo de Flutter & Dart com módulos progressivos, exemplos práticos e conteúdo 100% em português.
+  Guia completo de Flutter & Dart em Português Brasileiro — interativo, com exemplos prontos para copiar.
 
-  🔗 **[Ver o guia online →](https://wallysondevs.github.io/flutter-book/)**
+  🌐 **Site:** https://wallysondevs.github.io/flutter-book/
 
-  ## 📚 Conteúdo
+  ## Conteúdo
 
-  | # | Módulo |
-  |---|---|
-  | 01 | História e filosofia do Flutter |
-  | 02 | Instalação do SDK e configuração |
-  | 03 | Primeiro App — Hello World |
-  | 04 | Dart: tipos, variáveis, operadores |
-  | 05 | Controle de fluxo e funções |
-  | 06 | Coleções (List, Set, Map) |
-  | 07 | OOP em Dart (classes, mixins, sealed) |
-  | 08 | Programação assíncrona (Future, Stream, Isolate) |
-  | 09 | Widgets — Stateless e Stateful |
-  | 10 | Layouts (Row, Column, Stack, Expanded) |
-  | 11 | Material Design e Cupertino |
-  | 12 | Navegação (Navigator, go_router) |
-  | 13 | Gerenciamento de Estado (Provider, Riverpod, BLoC) |
-  | 14 | Networking (http, Dio, JSON) |
-  | 15 | Persistência (SharedPreferences, sqflite, Hive) |
-  | 16 | Animações (Implicit, Explicit, Hero) |
-  | 17 | Forms e Validação |
-  | 18 | Plataformas Nativas (Platform Channels, Plugins) |
-  | 19 | Testes (Unit, Widget, Integration) |
-  | 20 | Build & Deploy (Android, iOS, Web, Desktop) |
-  | 21 | Performance & DevTools |
-  | 22 | Padrões (Clean Architecture, Repository) |
-  | 23 | Firebase e Internacionalização |
+  81 páginas cobrindo:
 
-  ## 🛠 Tecnologia
+  - **Setup & Boas-vindas** — Instalação do SDK, IDE, primeira app
+  - **Dart Básico** — Tipos, null safety, funções, controle de fluxo
+  - **Coleções** — List, Set, Map, Iterables
+  - **OOP** — Classes, herança, mixins, sealed classes, extension methods
+  - **Async** — Futures, async/await, Streams, Isolates
+  - **Widgets** — Stateless, Stateful, widget tree, keys
+  - **Layout** — Container, Row, Column, Stack, Expanded, ListView, Slivers
+  - **Material & Cupertino** — Design systems e temas
+  - **Navegação** — Navigator 1.0, 2.0, go_router
+  - **Estado** — setState, Provider, Riverpod, BLoC, InheritedWidget
+  - **Networking** — http, Dio, JSON
+  - **Persistência** — SharedPreferences, sqflite, Hive, Isar
+  - **Forms & Animações** — Forms, animações implícitas/explícitas, Hero
+  - **Plataformas Nativas** — Platform Channels, Plugins, FFI
+  - **Testes** — Unit, widget e integration tests
+  - **Build & Deploy** — Android, iOS, Web, Desktop
+  - **Performance** — DevTools, profiling, RepaintBoundary
+  - **Arquitetura** — Clean Architecture, Repository, MVVM
+  - **Extras** — Firebase, i18n, referências
 
-  React • Vite • Tailwind CSS v4 • Wouter • Framer Motion • React Syntax Highlighter • GitHub Pages
+  ## Rodar localmente
+
+  ```bash
+  pnpm install
+  pnpm run dev
+  ```
+
+  ## Build local
+
+  ```bash
+  VITE_BASE=/ pnpm run build
+  pnpm run preview
+  ```
+
+  ## Stack
+
+  - React 18 + TypeScript
+  - Vite 6
+  - Tailwind CSS v4
+  - shadcn/ui (Radix + class-variance-authority)
+  - Wouter (hash routing — funciona no GitHub Pages sem 404 config)
+  - Framer Motion para microinterações
+
+  ## Deploy
+
+  Push para `main` dispara o workflow `.github/workflows/deploy.yml` que builda e publica em GitHub Pages.
+
+  ---
+
+  Inspirado pelo [java-book](https://github.com/Wallysondevs/java-book).
   
