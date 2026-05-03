@@ -1,0 +1,28 @@
+import{j as e}from"./index-D9yRYXwO.js";import{P as i,A as r,C as o}from"./AlertBox-B2Rl5ETq.js";function d(){return e.jsxs(i,{title:"Escolher uma IDE",subtitle:"VS Code, Android Studio ou IntelliJ — qual usar e como configurar.",difficulty:"iniciante",timeToRead:"9 min",children:[e.jsx("h2",{children:"Por que isso importa"}),e.jsxs("p",{children:["A IDE é onde você passa o dia inteiro. Uma escolha ruim te custa horas em build lento, autocomplete fraco e debugger frustrante. A boa notícia: para Flutter, qualquer das opções abaixo funciona — a diferença está em ",e.jsx("strong",{children:"peso, integração com Android e ergonomia"}),"."]}),e.jsx("h2",{children:"O conceito"}),e.jsx("p",{children:"Para programar em Flutter você precisa de:"}),e.jsxs("ul",{children:[e.jsxs("li",{children:["Um ",e.jsx("strong",{children:"editor"})," com ",e.jsx("em",{children:"Dart Analysis Server"})," ligado (autocomplete, hover, refactor)."]}),e.jsxs("li",{children:["Plugins para rodar ",e.jsx("code",{children:"flutter run"}),", abrir DevTools e debugar com breakpoints."]}),e.jsxs("li",{children:["Um ",e.jsx("strong",{children:"simulador iOS"})," (apenas em macOS) e/ou um ",e.jsx("strong",{children:"emulador Android"}),", ou um dispositivo físico."]})]}),e.jsx("h2",{children:"As três opções principais"}),e.jsxs("ul",{children:[e.jsxs("li",{children:[e.jsx("strong",{children:"VS Code"})," — leve, rápido, ótimo para o dia a dia. Plugins oficiais Dart e Flutter cobrem 95% das necessidades."]}),e.jsxs("li",{children:[e.jsx("strong",{children:"Android Studio"})," — pesado, mas com integração profunda ao SDK Android: gerenciador de AVDs, profiler, layout inspector nativo, gerador de ícones."]}),e.jsxs("li",{children:[e.jsx("strong",{children:"IntelliJ IDEA Ultimate"})," — mesma engine do Android Studio, sem as ferramentas Android. Vale se você já paga pela licença."]})]}),e.jsxs(r,{type:"info",title:"Recomendação prática",children:["Use ",e.jsx("strong",{children:"VS Code"})," para escrever código e ",e.jsx("strong",{children:"Android Studio"})," só quando precisar gerenciar emuladores Android, debugar problemas de build Gradle ou usar o Layout Inspector."]}),e.jsx("h2",{children:"Como configurar o VS Code"}),e.jsx(o,{title:"extensões essenciais",code:`# Abra Extensions (Cmd/Ctrl+Shift+X) e instale:
+#   - Dart                    (oficial Dart team)
+#   - Flutter                 (oficial Flutter team)
+#
+# Opcionais que ajudam muito:
+#   - Awesome Flutter Snippets (atalhos como stl, stful)
+#   - Pubspec Assist           (adicionar pacotes pelo nome)
+#   - Error Lens               (mostra erro inline)
+#   - Bracket Pair Colorizer   (parênteses coloridos)`}),e.jsx(o,{title:"settings.json recomendado",code:`{
+  "editor.formatOnSave": true,
+  "editor.rulers": [80],
+  "dart.lineLength": 80,
+  "dart.previewFlutterUiGuides": true,
+  "dart.previewFlutterUiGuidesCustomTracking": true,
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.tabSize": 2,
+    "editor.suggestSelection": "first"
+  }
+}`}),e.jsx("h2",{children:"Atalhos que valem a pena memorizar"}),e.jsxs("ul",{children:[e.jsxs("li",{children:[e.jsx("code",{children:"Ctrl/Cmd + ."})," — abre o menu de quick fixes (extrair widget, embrulhar em Padding, etc)."]}),e.jsxs("li",{children:[e.jsx("code",{children:"F5"})," — inicia debug; ",e.jsx("code",{children:"Shift+F5"})," para; ",e.jsx("code",{children:"Ctrl+F5"})," roda sem debugger."]}),e.jsxs("li",{children:[e.jsx("code",{children:"r"})," no terminal do ",e.jsx("code",{children:"flutter run"})," — hot reload; ",e.jsx("code",{children:"R"})," — hot restart."]}),e.jsxs("li",{children:[e.jsx("code",{children:"Cmd/Ctrl + click"})," em um símbolo — vai para a definição."]})]}),e.jsx("h2",{children:"Verificando o ambiente"}),e.jsx(o,{title:"checagem rápida",code:`# Roda um diagnóstico completo: SDK, dispositivos, licenças
+flutter doctor -v
+
+# Se aparecer erro em Android licenses:
+flutter doctor --android-licenses
+
+# Cria projeto e abre no VS Code:
+flutter create meu_app
+code meu_app`}),e.jsx("h2",{children:"Pegadinhas comuns"}),e.jsxs("ul",{children:[e.jsxs("li",{children:["Instalar Flutter SDK em pasta com ",e.jsx("strong",{children:"espaços ou acentos"})," no caminho — quebra builds em alguns sistemas."]}),e.jsxs("li",{children:["Esquecer de adicionar ",e.jsx("code",{children:"flutter/bin"})," ao ",e.jsx("strong",{children:"PATH"}),"."]}),e.jsxs("li",{children:["Usar dois SDKs Flutter no mesmo computador sem ",e.jsx("strong",{children:"FVM"})," — confusão garantida em projetos com versões diferentes."]}),e.jsx("li",{children:"Rodar Android emulator sem aceleração de hardware (HAXM/Hyper-V) — fica lentíssimo."})]}),e.jsxs(r,{type:"warning",title:"No macOS Apple Silicon",children:["Use a versão ARM64 do Flutter SDK e instale ",e.jsx("code",{children:"cocoapods"})," via ",e.jsx("code",{children:"sudo gem install cocoapods"})," ou via Homebrew. Sem isso, builds iOS quebram em mensagens crípticas."]}),e.jsx("h2",{children:"Boas práticas"}),e.jsxs(r,{type:"tip",title:"Use FVM se for mexer em vários projetos",children:["O ",e.jsx("em",{children:"Flutter Version Management"})," (",e.jsx("code",{children:"fvm"}),") deixa cada projeto travado numa versão do SDK, sem afetar o sistema todo. Indispensável em times."]}),e.jsx("h2",{children:"Próximos passos"}),e.jsx("p",{children:"Com a IDE configurada, é hora de abrir um projeto recém-criado e entender cada pasta dele."}),e.jsxs(r,{type:"success",title:"Continue lendo",children:["Próximo: ",e.jsx("em",{children:"Estrutura do Projeto"}),"."]})]})}export{d as default};
